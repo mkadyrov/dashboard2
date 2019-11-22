@@ -24,7 +24,7 @@ class RaitingCity extends React.Component {
           <div className={"w-auto cursor-pointer " + (this.state.isView ? 'text-yellow-500' : 'light-gray-text')} onClick={(env) => this.viewClick(true)}>Популярные</div>
           <div className={"w-auto pl-3 cursor-pointer " + (!this.state.isView ? 'text-yellow-500' : 'light-gray-text')} onClick={(env) => this.viewClick(false)}>Не популярные</div>
         </div>
-        <ScrollArea className="w-full border-t border-gray-800 h-20" horizontal={false}>
+        <ScrollArea className="w-full border-t border-gray-800 h-20 pr-2" horizontal={false}>
           {this.state.isView ? this.props.data.up.map((item, index) => <RaitingTextView key={index} item={item} index={index + 1} />) : this.props.data.down.map((item, index) => <RaitingTextView key={index} item={item} index={index + 1} />)}
         </ScrollArea>
       </div>
