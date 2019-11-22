@@ -8,32 +8,6 @@ class RaitingCity extends React.Component {
   constructor(props) {
     super(props);
     this.state = {isView: true};
-    this.arrayPlus = [
-      {id: 1, rate: '4.2', name: 'Павлодар'},
-      {id: 2, rate: '3.9', name: 'Семей'},
-      {id: 3, rate: '3.5', name: 'Экибастуз'},
-      {id: 4, rate: '3.4', name: 'Кызылорда'},
-      {id: 5, rate: '3.0', name: 'Актобе'},
-      {id: 6, rate: '2.9', name: 'Тараз'},
-      {id: 7, rate: '2.9', name: 'Уральск'},
-      {id: 8, rate: '2.7', name: 'Туркестан'},
-      {id: 9, rate: '2.6', name: 'Рудный'},
-      {id: 10, rate: '2.5', name: 'Темиртау'},
-      {id: 10, rate: '2.5', name: 'Караганда'},
-    ]
-    this.arrayMinus = [
-      {id: 1, rate: '4.2', name: 'Павлодар'},
-      {id: 2, rate: '3.9', name: 'Семей'},
-      {id: 3, rate: '3.5', name: 'Экибастуз'},
-      {id: 4, rate: '3.4', name: 'Кызылорда'},
-      {id: 5, rate: '3.0', name: 'Актобе'},
-      {id: 6, rate: '2.9', name: 'Тараз'},
-      {id: 7, rate: '2.9', name: 'Уральск'},
-      {id: 8, rate: '2.7', name: 'Туркестан'},
-      {id: 9, rate: '2.6', name: 'Рудный'},
-      {id: 10, rate: '2.5', name: 'Темиртау'},
-      {id: 10, rate: '2.5', name: 'Караганда'},
-    ]
     this.viewClick = this.viewClick.bind(this);
   }
 
@@ -52,7 +26,7 @@ class RaitingCity extends React.Component {
           <div className={"w-auto pl-3 cursor-pointer " + (!this.state.isView ? 'text-yellow-500' : 'light-gray-text')} onClick={(env) => this.viewClick(false)}>Лучшие</div>
         </div>
         <ScrollArea className="w-full h-20 pr-4" horizontal={false}>
-          {this.state.isView ? this.arrayPlus.map((item, index) => <RaitingStarView key={index} item={item} index={index + 1} />) : this.arrayMinus.map((item, index) => <RaitingStarView key={index} item={item} index={index + 1} />)}
+          {this.state.isView ? this.props.data.down.map((item, index) => <RaitingStarView key={index} item={item} index={index + 1} />) : this.props.data.up.map((item, index) => <RaitingStarView key={index} item={item} index={index + 1} />)}
         </ScrollArea>
       </div>
     );

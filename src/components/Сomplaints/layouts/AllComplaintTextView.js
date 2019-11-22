@@ -23,7 +23,7 @@ class AllComplaintTextView extends React.Component {
         <div className="w-full text-2xs">
           <div className="w-auto float-left light-gray-text">{this.props.item.date}</div>
           <div className="w-auto float-right text-yellow-500">
-            <a href="" className="text-yellow-500 cursor-pointer hover:text-yellow-700">{this.props.item.name}</a>
+            <span className="text-yellow-500 cursor-pointer hover:text-yellow-700">{this.props.item.name}</span>
           </div>
           <div className="clearfix"></div>
         </div>
@@ -31,7 +31,7 @@ class AllComplaintTextView extends React.Component {
           {this.props.item.text}
         </div>
         <div className="w-full text-xs text-gray-300 pb-2">
-          <a href="" className="text-yellow-500 cursor-pointer hover:text-yellow-700">Подробнее</a>
+          <span className="text-yellow-500 cursor-pointer hover:text-yellow-700">Подробнее</span>
         </div>
         <div className="w-full text-2xs">
           <div className="w-auto float-left light-gray-text">{this.props.item.phone}</div>

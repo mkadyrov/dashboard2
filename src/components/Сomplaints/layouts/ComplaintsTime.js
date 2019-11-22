@@ -1,6 +1,5 @@
 import React from 'react';
 import ComplaintsTimeView from './ComplaintsTimeView';
-import ScrollArea from 'react-scrollbar';
 
 class ComplaintsTime extends React.Component {
 

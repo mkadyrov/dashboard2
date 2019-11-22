@@ -8,8 +8,7 @@ import RaitingRegionsPage from './components/RaitingRegions/RaitingRegionsPage'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 
 import './styles/app.scss';

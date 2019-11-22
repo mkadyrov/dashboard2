@@ -24,24 +24,24 @@ class Service extends React.Component {
         </div>
         {this.state.isView &&
           <div className="w-full flex">
-            <div className="text-5xl font-medium text-gray-300">2.1</div>
+            <div className="text-5xl font-medium text-gray-300">{this.props.data.down.rate}</div>
             <div className="px-4 pt-8">
-              <img src={require("../../../assets/images/arrow-down.png")} className="h-5" />
+              <img src={require("../../../assets/images/arrow-down.png")} className="h-5" alt="arrow-down" />
             </div>
-            <div className="text-xl font-normal light-gray-text pt-8">от 2.2</div>
+            <div className="text-xl font-normal light-gray-text pt-8">от {this.props.data.down.from}</div>
           </div>
         }
         {!this.state.isView &&
           <div className="w-full flex" >
-            <div className="text-5xl font-medium text-gray-300">2.1</div>
+            <div className="text-5xl font-medium text-gray-300">{this.props.data.up.rate}</div>
             <div className="px-4 pt-8">
-              <img src={require("../../../assets/images/arrow-up.png")} className="h-5" />
+              <img src={require("../../../assets/images/arrow-up.png")} className="h-5" alt="arrow-up" />
             </div>
-            <div className="text-xl font-normal light-gray-text pt-8">от 2.2</div>
+            <div className="text-xl font-normal light-gray-text pt-8">от {this.props.data.up.from}</div>
           </div>
         }
         <div className="w-full text-xs pt-2">
-          <span className="text-yellow-500">Постановка ребенка в очередь в детский сад</span>
+          <span className="text-yellow-500">{this.state.isView ? this.props.data.down.service : this.props.data.up.service}</span>
         </div>
       </div>
     );

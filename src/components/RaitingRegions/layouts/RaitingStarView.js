@@ -21,7 +21,7 @@ class RaitingStarView extends React.Component {
           </div>
         </div>
         <div className="w-2/12 h-8 pt-1 pl-2 text-right relative">
-          <img src={Star} className="h-2 absolute left-0 top-0 ml-2 mt-2" />
+          <img src={Star} className="h-2 absolute left-0 top-0 ml-2 mt-2" alt="star" />
           <span>{this.props.item.rate}</span>
         </div>
       </div>

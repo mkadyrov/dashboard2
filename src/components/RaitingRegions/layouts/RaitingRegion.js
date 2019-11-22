@@ -7,32 +7,6 @@ class RaitingRegion extends React.Component {
   constructor(props) {
     super(props);
     this.state = {isView: true};
-    this.arrayPlus = [
-      {id: 1, rate: '4.2', name: 'Алматинская'},
-      {id: 2, rate: '3.9', name: 'Акмолинская'},
-      {id: 3, rate: '3.5', name: 'Туркестанская'},
-      {id: 4, rate: '3.4', name: 'ЗКО'},
-      {id: 5, rate: '3.0', name: 'Костанайская'},
-      {id: 6, rate: '2.9', name: 'Жамбылская'},
-      {id: 7, rate: '2.9', name: 'Актюбинская'},
-      {id: 8, rate: '2.7', name: 'Кызылординская'},
-      {id: 9, rate: '2.6', name: 'СКО'},
-      {id: 10, rate: '2.5', name: 'Атырауская'},
-      {id: 11, rate: '2.3', name: 'Мангыстауская'},
-    ]
-    this.arrayMinus = [
-      {id: 10, rate: '2.5', name: 'Атырауская'},
-      {id: 1, rate: '4.2', name: 'Алматинская'},
-      {id: 2, rate: '3.9', name: 'Акмолинская'},
-      {id: 9, rate: '2.6', name: 'СКО'},
-      {id: 3, rate: '3.5', name: 'Туркестанская'},
-      {id: 4, rate: '3.4', name: 'ЗКО'},
-      {id: 5, rate: '3.0', name: 'Костанайская'},
-      {id: 6, rate: '2.9', name: 'Жамбылская'},
-      {id: 7, rate: '2.9', name: 'Актюбинская'},
-      {id: 8, rate: '2.7', name: 'Кызылординская'},
-      {id: 11, rate: '2.3', name: 'Мангыстауская'},
-    ]
     this.viewClick = this.viewClick.bind(this);
   }
 
@@ -51,7 +25,7 @@ class RaitingRegion extends React.Component {
           <div className={"w-auto pl-3 cursor-pointer " + (!this.state.isView ? 'text-yellow-500' : 'light-gray-text')} onClick={(env) => this.viewClick(false)}>Лучшие</div>
         </div>
         <ScrollArea className="w-full h-20 pr-4" horizontal={false}>
-          {this.state.isView ? this.arrayPlus.map((item, index) => <RaitingStarView key={index} item={item} index={index + 1} />) : this.arrayMinus.map((item, index) => <RaitingStarView key={index} item={item} index={index + 1} />)}
+          {this.state.isView ? this.props.data.down.map((item, index) => <RaitingStarView key={index} item={item} index={index + 1} />) : this.props.data.up.map((item, index) => <RaitingStarView key={index} item={item} index={index + 1} />)}
         </ScrollArea>
       </div>
     );
