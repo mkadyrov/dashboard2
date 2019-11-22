@@ -15,10 +15,10 @@ import './styles/app.scss';
 
 function App() {
   return (
+    <Router>
     <div className="w-full h-auto app">
       <Header />
       <Breadcrumbs />
-      <Router>
         <Switch>
           <Route path='/first'>
             <RaitingRegionsPage />
@@ -28,11 +28,21 @@ function App() {
           </Route>
           <Route path='/'>
             <RaitingRegionsPage />
-          </Route>
+            </Route>
         </Switch>
-      </Router>
+
       <Footer />
+      <ul className="nav">
+            <li>
+              <Link to="/first" >Первая</Link>
+            </li>
+            <li>
+              <Link to="/second">Вторая</Link>
+            </li>
+          </ul>
     </div>
+    </Router>
+
   );
 }
 
