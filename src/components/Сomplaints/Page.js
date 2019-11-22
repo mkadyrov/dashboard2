@@ -4,6 +4,7 @@ import Departments from './layouts/Departments'
 import Akimats from './layouts/Akimats'
 import Organizations from './layouts/Organizations'
 import AllComplaint from './layouts/AllComplaint'
+import ComplaintsTime from './layouts/ComplaintsTime'
 import ComplaintsDay from './layouts/ComplaintsDay'
 
 class Page extends React.Component {
@@ -57,6 +58,12 @@ class Page extends React.Component {
         ],
         akimats: [],
         organizations: []
+      },
+      chart: {
+        data: [
+          {label: 'Series 1',data: [['11.11', 300], ['12.11', 400], ['13.11', 50], ['14.11', 500], ['15.11', 270], ['16.11', 80], ['17.11', 300], ['18.11', 250]]},
+          {label: 'Series 1',data: [['11.11', 200], ['12.11', 250], ['13.11', 100], ['14.11', 270], ['15.11', 350], ['16.11', 50], ['17.11', 250], ['18.11', 150]]},
+        ]
       }
     }
   }
@@ -77,10 +84,10 @@ class Page extends React.Component {
           <Organizations data={this.data.organizations} />
         </div>
         <div className="w-full sm:w-full md:w-full lg:w-2/4 xl:w-2/4 h-auto p-2">
-          1
+          <ComplaintsDay data={this.data.chart} />
         </div>
         <div className="w-full sm:w-full md:w-full lg:w-1/4 xl:w-1/4 h-auto p-2">
-          <ComplaintsDay data={this.data.days} />
+          <ComplaintsTime data={this.data.days} />
         </div>
         <div className="w-full sm:w-full md:w-full lg:w-1/4 xl:w-1/4 h-auto p-2">
           <AllComplaint data={this.data.allcomplaint} />

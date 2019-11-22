@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ComplaintsDayView (props) {
+function ComplaintsTimeView (props) {
   return (
     <div class="w-full flex text-2xs">
       <div class="w-1-8">
@@ -24,4 +24,4 @@ function ComplaintsDayView (props) {
   );
 }
 
-export default ComplaintsDayView;
+export default ComplaintsTimeView;
