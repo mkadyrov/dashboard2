@@ -1,0 +1,46 @@
+body {
+  background: #242B31;
+}
+
+.header{
+  background: #1F2326;
+}
+.status{
+  background: #1B1F22;
+}
+
+.light-gray-text{
+  color: #7D848A;
+}
+
+.h-20{
+  height: 20rem;
+}
+.mt-1-5{
+  margin-top: 0.35rem;
+}
+.text-2xs{
+  font-size: 0.7rem;
+}
+.w-1-8{
+  width: 12.5%;
+}
+.h-4-1{
+  height: 1.05rem;
+}
+
+.scrollarea .scrollbar-container.vertical{
+  width: 0.3rem!important;
+  opacity: 1!important;
+  background: #30373D!important;
+  border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+}
+.scrollarea .scrollbar-container.vertical .scrollbar{
+  width: 0.2rem!important;
+  background: #464D53!important;
+  border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+}
