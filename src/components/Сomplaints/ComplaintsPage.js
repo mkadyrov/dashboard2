@@ -7,7 +7,7 @@ import AllComplaint from './layouts/AllComplaint'
 import ComplaintsTime from './layouts/ComplaintsTime'
 import ComplaintsDay from './layouts/ComplaintsDay'
 
-class Page extends React.Component {
+class ComplaintsPage extends React.Component {
 
   constructor(props) {
     super(props);
@@ -60,10 +60,21 @@ class Page extends React.Component {
         organizations: []
       },
       chart: {
-        data: [
-          {label: 'Series 1',data: [['11.11', 300], ['12.11', 400], ['13.11', 50], ['14.11', 500], ['15.11', 270], ['16.11', 80], ['17.11', 300], ['18.11', 250]]},
-          {label: 'Series 1',data: [['11.11', 200], ['12.11', 250], ['13.11', 100], ['14.11', 270], ['15.11', 350], ['16.11', 50], ['17.11', 250], ['18.11', 150]]},
-        ]
+        labels: ['11.11', '12.11', '13.11', '14.11', '15.11', '16.11', '17.11', '18.11'],
+        datasets: [
+          {
+            label: 'Обработанные',
+            backgroundColor: '#3ec25f',
+            barThickness: 16,
+            data: [500, 700, 200, 850, 400, 250, 500, 300],
+          },
+          {
+            label: 'Не обработанные',
+            backgroundColor: '#df443a',
+            barThickness: 16,
+            data: [400, 600, 150, 700, 500, 200, 350, 200],
+          }
+        ],
       }
     }
   }
@@ -97,4 +108,4 @@ class Page extends React.Component {
   }
 }
 
-export default Page;
+export default ComplaintsPage;

@@ -1,6 +1,5 @@
 import React from 'react';
-import ComplaintsTimeView from './ComplaintsTimeView';
-import {Chart} from 'react-charts'
+import { Bar } from 'react-chartjs-2';
 
 class ComplaintsDay extends React.Component {
 
@@ -29,6 +28,7 @@ class ComplaintsDay extends React.Component {
   }
 
   render() {
+
     return (
       <div className="w-full h-auto p-4 relative border rounded border-gray-800">
         <div className="w-full text-gray-400 text-base">Жалобы по дням</div>
@@ -42,13 +42,13 @@ class ComplaintsDay extends React.Component {
             <div className={"w-auto cursor-pointer " + (this.state.days === 1 ? 'text-yellow-500' : 'light-gray-text hover:text-gray-500')} onClick={(env) => this.dayClick(1)}>1 день</div>
             <div className={"w-auto pl-3 cursor-pointer " + (this.state.days === 2 ? 'text-yellow-500' : 'light-gray-text hover:text-gray-500')} onClick={(env) => this.dayClick(2)}>7 дней</div>
             <div className={"w-auto pl-3 cursor-pointer " + (this.state.days === 3 ? 'text-yellow-500' : 'light-gray-text hover:text-gray-500')} onClick={(env) => this.dayClick(3)}>1 мес.</div>
-            <div className={"w-auto pl-3 cursor-pointer " + (this.state.days === 4 ? 'text-yellow-500' : 'light-gray-text hover:text-gray-500')} onClick={(env) => this.dayClick(5)}>3 мес.</div>
-            <div className={"w-auto pl-3 cursor-pointer " + (this.state.days === 5 ? 'text-yellow-500' : 'light-gray-text hover:text-gray-500')} onClick={(env) => this.dayClick(6)}>1 год</div>
+            <div className={"w-auto pl-3 cursor-pointer " + (this.state.days === 4 ? 'text-yellow-500' : 'light-gray-text hover:text-gray-500')} onClick={(env) => this.dayClick(4)}>3 мес.</div>
+            <div className={"w-auto pl-3 cursor-pointer " + (this.state.days === 5 ? 'text-yellow-500' : 'light-gray-text hover:text-gray-500')} onClick={(env) => this.dayClick(5)}>1 год</div>
           </div>
           <div className="clearfix"></div>
         </div>
         <div className="w-full h-20 mt-5">
-          <Chart data={this.props.data.data} series={this.series} axes={this.axes} />
+          <Bar data={this.props.data} />
         </div>
       </div>
     );

@@ -8,7 +8,7 @@ import RaitingCity from './layouts/RaitingCity'
 import RaitingDistrict from './layouts/RaitingDistrict'
 import RaitingService from './layouts/RaitingService'
 
-function Page () {
+function RaitingRegionsPage () {
 
   return (
     <div className="w-full h-auto p-2 flex flex-wrap">
@@ -40,4 +40,4 @@ function Page () {
   );
 }
 
-export default Page;
+export default RaitingRegionsPage;
