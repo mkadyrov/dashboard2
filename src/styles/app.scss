@@ -22,11 +22,29 @@ body {
 .text-2xs{
   font-size: 0.7rem;
 }
+.text-3xs{
+  font-size: 0.5rem;
+}
 .w-1-8{
   width: 12.5%;
 }
+.w-8-1{
+  width: 87.5%;
+}
 .h-4-1{
   height: 1.05rem;
+}
+.bg-0-100{
+  background: #2D363B;
+}
+.bg-101-200{
+  background: #574D34;
+}
+.bg-201-300{
+  background: #8B7A44;
+}
+.bg-301-400{
+  background: #E3BE4C;
 }
 
 .scrollarea .scrollbar-container.vertical{
