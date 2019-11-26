@@ -4,11 +4,11 @@ import Breadcrumbs from './components/Breadcrumbs'
 import Footer from './components/Footer'
 import ComplaintsPage from './components/Сomplaints/ComplaintsPage'
 import RaitingRegionsPage from './components/RaitingRegions/RaitingRegionsPage'
-
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Link
 } from 'react-router-dom';
 
 import './styles/app.scss';
@@ -32,14 +32,14 @@ function App() {
         </Switch>
 
       <Footer />
-      <ul className="nav">
-            <li>
-              <Link to="/first" >Первая</Link>
-            </li>
-            <li>
-              <Link to="/second">Вторая</Link>
-            </li>
-          </ul>
+      // <ul className="nav">
+      //       <li>
+      //         <Link to="/first" >Первая</Link>
+      //       </li>
+      //       <li>
+      //         <Link to="/second">Вторая</Link>
+      //       </li>
+      //     </ul>
     </div>
     </Router>
 
